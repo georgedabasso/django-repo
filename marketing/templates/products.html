@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <div style="background-color:lightgrey; height:800px;">
+    <h2 STYLE="text-align:center; padding-top:5%;">POPULAR COURSES</h2>
+
+
+    <div style="float:left; width:450px;background-color:white;margin-left:20px;height:500px;text-align:center;">
+         <div>
+             <img src="data:image/png;base64,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">
+        </div>
+
+        <h2>WEBSITES</h2>
+
+
+    </div>
+
+
+    <div style="float:left; width:450px;background-color:white;margin-left:20px;height:500px; text-align:center;">
+        <div>
+           <img src="https://shop.globalinternetfortunes.com/wp-content/uploads/2023/11/290-300x300.gif">
+        </div>
+        <h2>SANITARY PADS</h2>
+
+
+         <p>
+
+        </p>
+    </div>
+
+
+    <div style="float :left; width :450px;background-color:white;margin-left:20px;height:500px; text-align:center;">
+         <div>
+             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" style="width:300px;height:200px;">
+         </div>
+        <h2>E-COMMERCE PLATFORM</h2>
+
+
+        <p>
+
+
+        </p>
+    </div>
+
+
+    <div style="float:left; width:450px;background-color:white;margin-left:20px;height:500px; text-align:center;">
+         <div>
+             <img src="https://shop.globalinternetfortunes.com/wp-content/uploads/2023/11/155-300x300.gif">
+         </div>
+        <h2>PANTY LINERS</h2>
+
+
+        <p>
+
+
+        </p>
+    </div>
+
+
+
+</div>
+
+{% endblock %}

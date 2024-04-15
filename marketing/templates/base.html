@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Network Marketing</title>
+
+    <style>
+         #nav LI
+        {
+           list-style-type: none;
+            display:inline;
+            border-right: 1px solid white;
+        }
+        a
+        {
+           text-decoration:none;
+            padding:5px;
+            color:black;
+            font-size:20px;
+            text-transform: uppercase;
+        }
+
+           #nav
+        {
+           padding-left:100px;
+            background-color:purple;
+            padding-top:5px;
+            padding-bottom:5px;
+        }
+    </style>
+</head>
+<body>
+<UL ID="nav" style="clear:both;">
+
+    <LI><a href="http://localhost:8000/login/login">LOGIN</a></LI>
+    <LI><a href="http://localhost:8000/home/home">HOME</a></LI>
+     <LI><a href="http://localhost:8000/referrals/referrals">REFERRALS </a></LI>
+     <LI><a href="http://localhost:8000/orders/orders">ORDERS</a></LI>
+    <LI><a href="http://localhost:8000/products/products">PRODUCTS</a></LI>
+    <LI><a href="http://localhost:8000/registration/registration">REGISTRATION</a></LI>
+
+</UL>
+    <div>
+        {% block content %}
+            <table>
+        <td>
+            <img src="https://onlinebizkenyabusiness.files.wordpress.com/2020/01/logo-e1578401224155.png?w=1159" alt="GIF" style=height:700px;width:1300px;padding-left:300px;">
+        </td>
+
+    </table>
+<h1 style="text-align:center;">Welcome to GLOBAL INTERNET FORTUNES</h1>
+<h3 style="text-align:center;">TRANSFORMING LIVES SINCE 2012 </h3>
+        {% endblock %}
+    </div>
+
+
+<div style=" float:left; width:450px; margin-left:5%; height:400px; margin-top:100px;">
+    <h3 style="color:yellow;">Resources and Info</h3>
+
+    <ul>
+        <li> <a href="">About us</a></li>
+         <li> <a href=""> Google Hustle Academy </a></li>
+         <li> <a href=""> Boot camps</a></li>
+         <li> <a href="" >News and updates</a></li>
+         <li> <a href="">FAQs</a></li>
+    </ul>
+</div>
+
+    <div  style=" float:left; width:450px; margin-left:5%; height:400px; margin-top:100px; color:white; text-decoration:none;">
+        <h3 style="color:yellow;">Support</h3>
+        <ul style="color:white; text-decoration:none;">
+
+        <li > <a href="+254716608066">+254716608066</a></li>
+         <li > <a href="+254732608066">  +254732608066  </a></li>
+         <li > <a href=" info@gif.org">  info@gif.org  </a></li>
+         <li> ALL GATES HOUSE, NKRUMAH LANE, CBD, share same building with YOLO ICE CREAM, Nairobi </li>
+
+        </ul>
+    </div>
+</div>
+</body>
+</html>
