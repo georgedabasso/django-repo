@@ -1,11 +1,13 @@
 
 
 {% block content %}
+
+<div>
  <title>Registration Form</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: purple;
+      background-color: navajowhite;
       margin: 0;
       padding: 0;
       display: flex;
@@ -53,11 +55,50 @@
   </style>
 </head>
 <body>
-  <form action="/adduser" method="post">
+  <form action="/adduser" method="POST">
+      {% csrf_token %}
     <h2>Registration Form</h2>
-    <input type="text" name="fullname" placeholder="Full Name" required>
+    <input type="text" name="fullname" placeholder="Name" required>
     <input type="email" name="email" placeholder="Email Address" required>
     <input type="password" name="password" placeholder="Password" required>
     <input type="submit" value="Register">
   </form>
+
+
+
+
+    <div class="col-md-7" style="border-right: 1px solid red; padding:10px;">
+        <u><h3 class="bg-dark text-white text-center p-1">Registered Users</h3></u>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th> NAME </th>
+                    <th> EMAIL </th>
+                    <th> PASSWORD </th>
+                    <th> EDIT </th>
+                    <th> DELETE </th>
+                </tr>
+            </thead>
+            <tbody>
+
+            {% for user in data %}
+                <tr>
+                    <td>{{ user.fullname }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.password }}</td>
+                    <td>
+                        <a href="/edituser/{{ user.id }}" type="button" class="btn btn-outline-success">EDIT</a>
+                    </td>
+                    <td>
+                        <a href="/deleteuser/{{ user.id }}" type="button" class="btn btn-outline-danger">DELETE</a>
+                    </td>
+
+                </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+</body>
+</div>
 {% endblock %}
